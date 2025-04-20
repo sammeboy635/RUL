@@ -1,0 +1,13 @@
+[package]
+name = "bitpack"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+quote = "1.0.40"
+syn = { version = "2.0.100", features = ["full", "extra-traits"] }
+proc-macro2 = "1.0"
+ctor = "0.4.1"
+
+[lib]
+proc-macro = true

@@ -1,0 +1,21 @@
+[package]
+name = "learning_rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ctor = "0.4.1"
+bitpack = { path = "bitpack" }
+my_lib = { path = "my_lib" }
+
+[profile.release]
+opt-level = "z"        # "z" = optimize for smallest size ("s" = small, but slightly larger than "z")
+lto = true             # Enable Link Time Optimization
+codegen-units = 1      # Reduces parallelism, but improves optimizations
+panic = "abort"        # Removes stack unwind info
+strip = true           # Removes debug symbols (requires nightly or a manual step)
+
+[profile.dev]
+opt-level = "z"        # "z" = optimize for smallest size ("s" = small, but slightly larger than "z")
+lto = true             # Enable Link Time Optimization
+codegen-units = 1      # Reduces parallelism, but improves optimizations
