@@ -7,17 +7,27 @@ name = "RUL"
 version = "0.1.0"
 dependencies = [
  "bitpack",
+ "ctor 0.1.0",
  "my_lib",
+ "token_soup",
 ]
 
 [[package]]
 name = "bitpack"
 version = "0.1.0"
 dependencies = [
- "ctor",
+ "ctor 0.4.1",
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "ctor"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
+ "token_soup",
 ]
 
 [[package]]
@@ -91,6 +101,13 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "token_soup"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
 ]
 
 [[package]]

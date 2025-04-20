@@ -29,7 +29,7 @@ impl std::str::FromStr for Endian {
 #[proc_macro_derive(BitPacked, attributes(bits, endian))]
 pub fn bit_packed_derive(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
-	println!("{:#?}", input);
+	// println!("{:#?}", input);
 	// parse_endian_input(&input);
     let struct_name = &input.ident;
 
@@ -184,7 +184,7 @@ pub fn my_attr(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let fn_name = &input.sig.ident;
     let fn_name_str = fn_name.to_string();
 	
-	println!("Field: {:#?}", fn_name); 
+	// println!("Field: {:#?}", fn_name); 
 	let ident = format_ident!("register_{}", fn_name_str);
     let expanded = quote! {
         #input
@@ -196,6 +196,6 @@ pub fn my_attr(_attr: TokenStream, item: TokenStream) -> TokenStream {
         }
     };
 
-	println!("{}", expanded.to_string());
+	// println!("{}", expanded.to_string());
     TokenStream::from(expanded)
 }

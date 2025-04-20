@@ -7,11 +7,13 @@ edition = "2024"
 path = "src/lib.rs"
 
 [[bin]]
-name = "my_lib_bin"
+name = "main"
 path = "src/main.rs"
 
 [dependencies]
+TokenSoup = { path = "TokenSoup" }
 bitpack = { path = "bitpack" }
+ctor = { path = "ctor" }
 my_lib = { path = "my_lib" }
 
 [profile.release]
