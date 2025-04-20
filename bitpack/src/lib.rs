@@ -4,6 +4,7 @@ use std::str::FromStr;
 use proc_macro::{Ident, Span, TokenStream};
 use quote::{quote, ToTokens, format_ident};
 use syn::{parse_macro_input, Data, DeriveInput, ItemFn};
+use ctor::ctor;
 
 static IDENT_ENDIAN: &str = "endian";
 static IDENT_BITS: &str = "bits";
