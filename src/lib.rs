@@ -1,2 +1,2 @@
-pub use bitpack;
-pub use my_lib;
+pub use bitpack::*;
+pub use my_lib::*;

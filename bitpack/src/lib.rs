@@ -29,7 +29,7 @@ impl std::str::FromStr for Endian {
 pub fn bit_packed_derive(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
 	println!("{:#?}", input);
-	parse_endian_input(&input);
+	// parse_endian_input(&input);
     let struct_name = &input.ident;
 
     let data = match &input.data {
